@@ -1,0 +1,116 @@
+@import "./mixins.scss";
+@import "./fonts.scss";
+:root {
+  --text: #16181d;
+  --bg: #fff;
+  --light: #f7f7f7;
+  --bg-2: #f0f0f0;
+  --primary: #0f79fc;
+  --primary-light: #c5ddff;
+  --primary-hover: #3288ff;
+  --secondary: rgb(21, 15, 40);
+  --red: #ff4a4a;
+  --font: "Inter", "Futuru", sans-serif;
+  --border: #E1E9EF;
+  --gray: rgb(96, 99, 101);
+  --stroke: rgba(54,55,64,.2);
+  --shadow: 0 0.2777777778vw 1.25vw 0 rgba(0, 0, 0, 0.05);
+  --shadow-mob: 0 0.5555555556vw 2.5vw 0 rgba(0, 0, 0, 0.05);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font);
+  scroll-behavior: smooth;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+html {
+  font-size: 16px;
+}
+body {
+  min-height: 100svh;
+  width: 100%;
+  color: var(--text);
+  max-width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+  font-size: 16px;
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+header .searchbar{
+  @include media(576){
+    display: none;
+  }
+}
+.pop{
+  user-select: none;
+  transition-duration: 0.2s;
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0, 0, .2, 1);
+}
+.pop:active:focus,
+.pop:active:hover{
+  animation: button-pop 0s ease-out;
+  transform: scale(.95);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pop{
+    animation: button-pop .25s ease-out;
+  }
+}
+#__next {
+  min-height: 100svh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.wrapper{
+  display: flex;  
+  flex-direction: column; 
+  min-height: 100svh;
+}
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  @include media(576) {
+    @include resa("padding-top", 50px);
+    @include resa("padding-bottom", 100px);
+  }
+  &.pt{
+    @include res("padding-top", 30px);
+    @include media(576){
+      @include resa("padding-top", 65px);
+    }
+  }
+  &.nopb{
+    @include media(576){
+      padding-bottom: 0;
+    }
+  }
+}
+.container {
+  @include res("width", 1720px);
+  margin-left: auto;
+  margin-right: auto;
+  @include media(575) {
+    @include resa("width", 344px);
+  }
+}
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,128 @@
+@import '@/styles/mixins.scss';
+.intro {
+    @include res('margin-top', 24px);
+    border: solid #E1E9EF;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #F9FAFC 80%, #FFFFFF);
+    @include res('border-width', 1px);
+    @include res('border-radius', 24px);
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%;
+    background: url("/intro-bg.svg") no-repeat center;
+    background-size: cover;
+    @include res('padding-bottom', 40px);
+    @include res('border-radius', 24px);
+}
+.span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #E1E9EF;
+    background: #ffffff;
+    width: max-content;
+    @include res('font-size', 14px);
+    @include res('margin-top', 62px);
+    @include res('padding-top', 6px);
+    @include res('padding-bottom', 6px);
+    @include res('padding-left', 14px);
+    @include res('padding-right', 14px);
+    @include res('gap', 8px);
+    @include res('border-radius', 100px);
+    @include res('border-width', 1px);
+    @include res('margin-bottom', 10px);
+    svg {
+        @include res('width', 20px);
+        @include res('height', 20px);
+    }
+}
+.title{
+    font-family: Futuru, sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    @include res('font-size', 64px);
+    @include res('line-height', 72px);
+    @include res('letter-spacing', 1.28px);
+}
+.desc{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    @include res('font-size', 16px);
+    @include res('line-height', 24px);
+    @include res('max-width', 375px);
+    @include res('margin-top', 32px);
+    @include res('margin-bottom', 40px);
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include res('gap', 12px);
+}
+.btnPrimary{
+    background: #0f79fc;
+    color: #fff;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    @include res('padding-top', 12px);
+    @include res('padding-bottom', 12px);
+    @include res('padding-left', 32px);
+    @include res('padding-right', 32px);
+    @include res('border-radius', 100px);
+    @include res('height', 48px);
+    @include res('font-size', 16px);
+    @include res('line-height', 24px);
+}
+.btnSecondary{
+    display: flex;
+    text-decoration: none;
+    border: solid #E1E9EF;
+    background: #fff;
+    color: #0f79fc;
+    font-style: normal;
+    font-weight: 400;
+    @include res('gap', 8px);
+    @include res('height', 48px);
+    @include res('padding-top', 12px);
+    @include res('padding-bottom', 12px);
+    @include res('padding-left', 32px);
+    @include res('padding-right', 32px);
+    @include res('border-radius', 100px);
+    @include res('border-width', 1px);
+    @include res('font-size', 16px);
+    @include res('line-height', 24px);
+    svg {
+        @include res('width', 24px);
+        @include res('height', 24px);
+        path {
+            fill: #0f79fc;
+        }
+    }
+}
+.img {
+    @include res('width', 1381px);
+    @include res('height', 565px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
