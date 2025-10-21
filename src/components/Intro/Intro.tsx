@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Intro = () => {
   return (
-    <div className={`container ${styles.container}`}>
+    <div className={`container ${styles.container}`} id="intro">
         <div className={styles.intro}>
             <div className={styles.content}>
                 <span className={styles.span}>

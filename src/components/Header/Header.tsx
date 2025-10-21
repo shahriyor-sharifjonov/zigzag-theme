@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className={`container ${styles.container}`}>
         <Link href="#!" className={styles.logo}>
           <Image src="/logo.svg" alt="Logo" width={190} height={19.64} draggable={false} />

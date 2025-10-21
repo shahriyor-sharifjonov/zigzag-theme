@@ -1,0 +1,117 @@
+@import '@/styles/mixins.scss';
+.footer{
+  border-top: solid #E1E9EF;
+  @include res('margin-top', 100px);
+  @include res('border-width', 1px);
+}
+.container{
+  position: relative;
+  @include res('padding-top', 40px);
+  @include res('padding-bottom', 40px);
+}
+.up{
+  position: absolute;
+  border-radius: 100px;
+  border: solid #E1E9EF;
+  background: #FFF;
+  cursor: pointer;
+  line-height: 0;
+  @include res('border-width', 1px);
+  @include res('padding', 10px);
+  @include res('right', 100px);
+  @include res('top', -24px);
+  svg{
+    @include res('width', 24px);
+    @include res('height', 24px);
+    line-height: 0;
+    path {
+      fill: #0f79fc;
+    }
+  }
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+  @include res('gap', 40px);
+}
+.logo{
+  display: flex;
+  flex-direction: column;
+  @include res('gap', 24px);
+  img{
+    @include res('width', 190px);
+    @include res('height', 19.64px);
+    object-fit: cover;
+  }
+  p{
+    color: #16181d;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0;
+    @include res('font-size', 16px);
+    @include res('line-height', 24px);
+  }
+}
+.navigation{
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  @include res('gap', 160px);
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  @include res('gap', 16px);
+}
+.header{
+  color: #737477;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  @include res('font-size', 14px);
+  @include res('line-height', 20px);
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  @include res('gap', 16px);
+}
+.link{
+  color: #16181d;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  @include res('font-size', 16px);
+  @include res('line-height', 24px);
+}
+.bot{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include res('gap', 12px);
+  @include res('margin-top', 72px);
+}
+.left{
+  display: flex;
+  list-style: none;
+  @include res('gap', 16px);
+  a{
+    color: #737477;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    @include res('font-size', 14px);
+    @include res('line-height', 20px);
+  }
+}
+.copy{
+  color: #737477;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  @include res('font-size', 14px);
+  @include res('line-height', 20px);
+}
