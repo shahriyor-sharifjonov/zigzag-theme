@@ -1,0 +1,82 @@
+@import '@/styles/mixins.scss';
+.download{
+  display: flex;
+}
+.container{
+  margin: auto;
+  border: solid #E1E9EF;
+  background: linear-gradient(83deg, #F9FAFC 0%, #F4F3FF 107.64%);
+  overflow: hidden;
+  position: relative;
+  @include res('max-width', 1240px);
+  @include res('border-radius', 24px);
+  @include res('border-width', 1px);
+  @include res('padding', 80px);
+  @include res('padding-left', 100px);
+  @include res('padding-right', 100px);
+
+  &>img{
+    position: absolute;
+    height: 180%;
+    width: auto;
+    @include res('bottom', -270px);
+    @include res('right', -20px);
+  }
+}
+.span{
+  border: solid #E1E9EF;
+  background: #fff;
+  color: #45464a;
+  font-weight: 500;
+  display: flex;
+  width: max-content;
+  @include res('border-radius', 100px);
+  @include res('border-width', 1px);
+  @include res('padding', 6px);
+  @include res('padding-left', 12px);
+  @include res('padding-right', 12px);
+  @include res('font-size', 14px);
+  @include res('line-height', 16px);
+  @include res('margin-bottom', 10px);
+  img{
+    line-height: 0;
+    @include res('width', 16px);
+    @include res('height', 16px);
+    @include res('margin-right', 8px);
+  }
+}
+.title{
+  font-family: Futuru, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+  @include res('margin-bottom', 24px);
+  @include res('font-size', 48px);
+  @include res('line-height', 56px);
+  @include res('letter-spacing', .96px);
+}
+.description{
+  color: #45464a;
+  font-style: normal;
+  font-weight: 400;
+  @include res('font-size', 16px);
+  @include res('line-height', 24px);
+}
+.action{
+  display: flex;
+  flex-wrap: wrap;
+  @include res('gap', 20px);
+  @include res('margin-top', 32px);
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include res('width', 170px);
+    @include res('height', 52px);
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
