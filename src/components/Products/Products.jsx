@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from './Products.module.scss'
 
 const Products = () => {
-  const [activeTab, setActiveTab] = useState<'companies' | 'drivers'>('drivers');
+  const [activeTab, setActiveTab] = useState('drivers');
 
   return (
     <section id="products" className={styles.products}>
