@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Intro = () => {
   return (
-    <div className={`container ${styles.container}`} id="intro">
+    <section className={`container ${styles.container}`} id="intro">
         <div className={styles.intro}>
             <div className={styles.content}>
                 <span className={styles.span}>
@@ -32,7 +32,7 @@ const Intro = () => {
                 <Image src="/intro.png" alt="intro" width={1381} height={565} draggable={false} />
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 

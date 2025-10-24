@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import styles from './Footer.module.scss'
 import Image from "next/image";
-import {Facebook, Instagram, Youtube} from "lucide-react";
 
 const Footer = () => {
   return (
