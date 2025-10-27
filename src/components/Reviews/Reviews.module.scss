@@ -1,0 +1,130 @@
+@import '@/styles/mixins.scss';
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include res('max-width', 1240px);
+  @include res('margin-bottom', 120px);
+}
+.title{
+  font-family: Futuru, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0;
+  @include res('font-size', 48px);
+  @include res('line-height', 56px);
+  @include res('letter-spacing', .96px);
+}
+.cards{
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+  @include res('margin-top', 40px);
+  @include res('gap', 10px);
+}
+.slide{
+  display: inline-block;
+  animation: slide 40s infinite linear;
+}
+.inner{
+  display: flex;
+  align-items: center;
+  @include res('gap', 10px);
+}
+.item{
+  align-self: stretch;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: solid #E1E9EF;
+  background: #fff;
+  height: 100%;
+  @include res('padding', 24px);
+  @include res('gap', 16px);
+  @include res('border-radius', 16px);
+  @include res('border-width', 1px);
+  @include res('width', 340px);
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.comment{
+  white-space: normal;
+  color: #16181d;
+  font-style: normal;
+  font-weight: 400;
+  @include res('font-size', 14px);
+  @include res('line-height', 24px);
+}
+.info{
+  display: flex;
+  @include res('gap', 10px);
+}
+.ava{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  @include res('width', 48px);
+  @include res('height', 48px);
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.name{
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  @include res('font-size', 16px);
+  @include res('line-height', 24px);
+}
+.desc{
+  color: #737477;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  @include res('font-size', 14px);
+  @include res('line-height', 20px);
+}
+.quote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  @include res('width', 40px);
+  @include res('height', 40px);
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.comment{
+  white-space: normal;
+  font-style: normal;
+  font-weight: 400;
+  @include res('font-size', 14px);
+  @include res('line-height', 24px);
+}
+
+@keyframes slide {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translate(-100%);
+  }
+}

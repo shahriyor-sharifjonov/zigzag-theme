@@ -5,6 +5,7 @@ import Products from "@/components/Products/Products";
 import Join from "@/components/Join/Join";
 import Download from "@/components/Download/Download";
 import Integrations from "@/components/Integrations/Integrations";
+import Reviews from "@/components/Reviews/Reviews";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Products />
         <Join />
         <Integrations />
+        <Reviews />
         <Download />
       </main>
       <Footer />
